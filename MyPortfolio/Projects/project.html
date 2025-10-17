@@ -5,23 +5,52 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap" rel="stylesheet">
         <style>
-
+             @font-face { /*Code from google*/
+            font-family: "Extrude"; /* Choose a name for your font family */
+            src: url("/MyPortfolio/Fonts/Extrude.ttf") format("truetype"); /* Specify the path to your TTF file and its format */
+            /* You can also add other descriptors like font-weight and font-style if needed */
+            /* font-weight: normal; */
+            /* font-style: normal; */
+            }
             body {
-                background-image: url("ProjectBG.png"); /* Wallpaper by Julie on WallpaperSafari*/
+                background-image: url("/MyPortfolio/Images/ProjectBG.png"); /* Wallpaper by Julie on WallpaperSafari*/
+                background-size: 120%;
+                background-attachment: fixed;
+                
+                
             }
             .unit {
                 font-family: 'Pixelify Sans', sans-serif;
-                color: rgb(213, 231, 250);
-                font-size: 700%;
+                color: rgb(161, 179, 229);
+                font-size: 400%;
+                text-align: center;
+                height: 500px;
+                overflow-y: scroll;
+                mask-image: linear-gradient(to top, #ffffff 70%, transparent);
+                -webkit-mask-image: linear-gradient(to top, #ffffff 70%, transparent);
+            }
+            #Proj {
+                font-family: "Extrude", sans-serif;
+                color: rgb(255, 255, 255);
+                font-size: 600%;
+                
+                position: fixed;
+                bottom: 40%;
+                left: 20%;
+                  
+                
             }
         </style>
     </head>
     <body>
         <div class="unit">
-            <h1>Unit 1</h1>
+            <br><br><br><br><h1>Unit 1</h1>
             <h1>Unit 2</h1>
             <h1>Unit 3</h1>
             <h1>Unit 4</h1>
+        </div>
+        <div id="Proj">
+            <h1>PROJECTS</h1>
         </div>
     </body>
     

@@ -8,6 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <style>
+        @font-face { /*Code from google*/
+        font-family: "Extrude"; /* Choose a name for your font family */
+        src: url("/MyPortfolio/Fonts/Extrude.ttf") format("truetype"); /* Specify the path to your TTF file and its format */
+        /* You can also add other descriptors like font-weight and font-style if needed */
+        /* font-weight: normal; */
+        /* font-style: normal; */
+    }
     * {
       margin: 0;
       padding: 0;
@@ -16,7 +23,7 @@
     }
 
     body {
-      background-image: url("Space pixel.png"); /*Wallpaper by Travis on WallpaperSafari*/
+      background-image: url("/MyPortfolio/Images/Space\ pixel.png"); /*Wallpaper by Travis on WallpaperSafari*/
       color: white;
       display: flex;
       flex-direction: column;
@@ -170,6 +177,12 @@
         display: flex;
       }
     }
+    h1 {
+      font-family: "Extrude", sans-serif;
+      text-align: center;
+      font-size: 800%;
+
+    }
   </style>
 </head>
 <body>
@@ -225,5 +238,9 @@
       sidebarDropdown.style.display = sidebarDropdown.style.display === 'flex' ? 'none' : 'flex';
     });
   </script>
+  <div style="margin-top: 10%;">
+    <h1>Yuwa's</h1>
+    <h1>PORTFOLIO</h1>
+  </div>
 </body>
 </html>
