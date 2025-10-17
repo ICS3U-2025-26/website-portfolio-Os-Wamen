@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuwa's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'VT323','Inter', sans-serif;
+    }
+
+    body {
+      background-image: url("Space pixel.png"); /*Wallpaper by Travis on WallpaperSafari*/
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #1a3333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      position: relative;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #d1d5db;
+      transition: color 0.3s ease;
+      font-size: 2rem;
+    }
+
+    .nav-links li a:hover {
+      color: #3c7e5d;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #1a3333;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      flex-direction: column;
+      min-width: 150px;
+      z-index: 999;
+    }
+
+    .dropdown a {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      color: #d1d5db;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #1a3333;
+      color: #1c7b5d;
+    }
+
+    .nav-links li:hover .dropdown {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background-color: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #1a3333;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a, .sidebar button {
+      text-decoration: none;
+      color: #d1d5db;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .sidebar a:hover, .sidebar button:hover {
+      background-color: #1a3333;
+      color: #387f5b;
+    }
+
+    .sidebar .sidebar-dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: #1a3333;
+      margin-left: 10px;
+      border-left: 2px solid #3e7e74;
+    }
+
+    .sidebar .sidebar-dropdown a {
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">YIP</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Projects ▾</a>
+        <div class="dropdown">
+          <a href="#">Unit 1</a>
+          <a href="#">Unit 2</a>
+          <a href="#">Unit 3</a>
+          <a href="#">Unit 4</a>
+        </div>
+      </li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Gaming Hub</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <button id="projectToggle">Projects ▾</button>
+    <div class="sidebar-dropdown" id="sidebarDropdown">
+      <a href="#">Unit 1</a>
+      <a href="#">Unit 2</a>
+      <a href="#">Unit 3</a>
+      <a href="#">Unit 4</a>
+    </div>
+    <a href="#">Resources</a>
+    <a href="#">About Me</a>
+    <a href="#">Gaming Hub</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const projectToggle = document.getElementById('projectToggle');
+    const sidebarDropdown = document.getElementById('sidebarDropdown');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    projectToggle.addEventListener('click', () => {
+      sidebarDropdown.style.display = sidebarDropdown.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
