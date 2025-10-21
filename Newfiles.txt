@@ -4,3 +4,8 @@ Google background-size tag
 positioning https://www.w3schools.com/css/css_positioning.asp
 Extrude font ref: https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=238
 Scrolling of units https://www.google.com/search?q=how+to+make+background+position+fixed+in+css&authuser=0&aep=21&udm=50&utm_source=google&utm_campaign=aim_aware&utm_content=oo-seaport-10197&mtid=4oHyaNa_G7DawN4P3IHGkAk&mstk=AUtExfBkM65NNsLx9RNJFlA0NkZads_BvOv4nvnNPoanwgxLQob5iA_4SB9dt0oBMf3baQxn39h0Gbs2OCdFBDWhU_NgkYVasAvLTsXd4-BDvhA4_wTbmUQfbVE4jRv_B4tMD-tNsabmR59MWTVAf4tcdb1XJ988pc7iBP51h-ofuPIQFfVIr-dx0y0ldtEVWOj9RL71YC6XyD3veLT33k8tct9wnvug0WB3OBDsNbL24N_M-kVOSpqricqoriSCCgLGBm-6uLyX4TRUrwiRB4GDvW8DWRNqkYBLoiHZ5lH3IAxheW_2q4V93H6-8yhIQ_5OG7g9rZtIpsOd0Q&csuir=1
+removing under line https://community.klaviyo.com/marketing-30/is-it-possible-to-use-html-css-to-remove-an-underline-from-a-link-9444
+changing link colour https://www.w3schools.com/html/html_links_colors.asp
+
+
+
