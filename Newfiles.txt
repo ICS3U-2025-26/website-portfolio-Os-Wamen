@@ -7,5 +7,5 @@ Scrolling of units https://www.google.com/search?q=how+to+make+background+positi
 removing under line https://community.klaviyo.com/marketing-30/is-it-possible-to-use-html-css-to-remove-an-underline-from-a-link-9444
 changing link colour https://www.w3schools.com/html/html_links_colors.asp
 w3schools img center align
-
+https://www.w3schools.com/css/css3_image_center.asp image center
 
