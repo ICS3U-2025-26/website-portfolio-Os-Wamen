@@ -190,13 +190,21 @@
     }
     #center {
       display: flex;
-      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
     .heading {
             font-family:'VT323','Inter', sans-serif;
             color: #d1d5db;
             font-size: 300%;
             text-align: center;
+        }
+    .iframe-container {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically (if container has height) */
+            width: 100%;
         }
   </style>
 </head>
@@ -212,6 +220,7 @@
           <a href="Projects/unit2.html">Unit 2</a>
           <a href="Projects/unit3.html">Unit 3</a>
           <a href="Projects/unit4.html">Unit 4</a>
+          <a href="Projects/Final.html">Final</a>
         </div>
       </li>
       <li><a href="resources.html">Resources</a></li>
@@ -233,6 +242,7 @@
       <a href="Projects/unit2.html">Unit 2</a>
       <a href="Projects/unit3.html">Unit 3</a>
       <a href="Projects/unit4.html">Unit 4</a>
+      <a href="Projects/Final.html">Final</a>
     </div>
     <a href="resources.html">Resources</a>
     <a href="about.html">About Me</a>
@@ -265,7 +275,7 @@
   
 
 <div id="center">
-    <a href="https://scratch.mit.edu/projects/962862362/" target="_blank"><img src="Images/Game1.png" width="50%" style="border: 10px dashed #ffffff"></a>
+    <a href="https://scratch.mit.edu/projects/962862362/" target="_blank"><img src="Images/Game1.png" width="100%" style="border: 10px dashed #ffffff"></a>
   </div>
 <br><br><br><br>
 <div class="heading">
@@ -276,7 +286,23 @@
 
 
 <div id="center">
-    <a href="https://scratch.mit.edu/projects/985747138/" target="_blank"><img src="Images/Game2.png" width="50%" style="border: 10px dashed #ffffff"></a>
-  </div>
+    <a href="https://scratch.mit.edu/projects/985747138/" target="_blank"><img src="Images/Game2.png" width="100%" style="border: 10px dashed #ffffff"></a></div>
+<br><br><br>
+
+<div class="heading">
+  <h2>P5.js Game</h2>
+</div>
+<br><br><br>
+
+<div class="iframe-container">
+  <iframe 
+  src="/MyPortfolio/My-P5/index.html" 
+  width="1200" 
+  height="800" 
+  style="border: none; overflow: hidden;" 
+  scrolling="no">
+        
+  </iframe>
+</div>
 </body>
 </html>

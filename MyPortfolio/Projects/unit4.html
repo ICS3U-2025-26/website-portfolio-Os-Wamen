@@ -26,7 +26,7 @@
         }
 
         body {
-            background-image: url("Images/UnitBG.png");
+            background-image: url("../Images/UnitBG.png");
         }
 
          
@@ -185,6 +185,12 @@
             text-align: center;
             color: #ffffff;
         }
+        .iframe-container {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically (if container has height) */
+            width: 100%;
+        }
         </style>
     </head>
     <body>
@@ -193,7 +199,7 @@
         <nav>
         <div class="logo">✧yIp✧</div>
         <ul class="nav-links" id="navLinks">
-        <li><a href="Index.html">Home</a></li>
+        <li><a href="../../MyPortfolio/Index.html">Home</a></li>
         <li>
             <a href="project.html">Projects ▾</a>
             <div class="dropdown">
@@ -201,11 +207,12 @@
             <a href="unit2.html">Unit 2</a>
             <a href="unit3.html">Unit 3</a>
             <a href="unit4.html">Unit 4</a>
+            <a href="Final.html">Final</a>
             </div>
         </li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="Gaming.html">Gaming Hub</a></li>
+        <li><a href="../../MyPortfolio/resources.html">Resources</a></li>
+        <li><a href="../../MyPortfolio/about.html">About Me</a></li>
+        <li><a href="../../MyPortfolio/Gaming.html">Gaming Hub</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle">
         <span></span>
@@ -215,17 +222,18 @@
     </nav>
 
     <div class="sidebar" id="sidebar">
-        <a href="Index.html">Home</a>
+        <a href="../../MyPortfolio/Index.html">Home</a>
         <button id="projectToggle">Projects ▾</button>
         <div class="sidebar-dropdown" id="sidebarDropdown">
         <a href="unit1.html">Unit 1</a>
         <a href="unit2.html">Unit 2</a>
         <a href="unit3.html">Unit 3</a>
         <a href="unit4.html">Unit 4</a>
+        <a href="Final.html">Final</a>
         </div>
-        <a href="resources.html">Resources</a>
-        <a href="about.html">About Me</a>
-        <a href="Gaming.html">Gaming Hub</a>
+        <a href="../../MyPortfolio/resources.html">Resources</a>
+        <a href="../../MyPortfolio/about.html">About Me</a>
+        <a href="../../MyPortfolio/Gaming.html">Gaming Hub</a>
     </div>
 
     <script>
@@ -246,8 +254,20 @@
         <h1>Unit 4</h1>
     </div>
     </div>
+
     <div id="Mss">
-        <h1>THIS PAGE COMING SOON!</h1>
+        <h1>My p5.js Artwork!</h1>
+    </div>
+
+    <div class="iframe-container">
+        <iframe 
+        src="../My-P5/index.html" 
+        width="1200" 
+        height="800" 
+        style="border: none; overflow: hidden;" 
+        scrolling="no">
+        
+    </iframe>
     </div>
     </body>
 
