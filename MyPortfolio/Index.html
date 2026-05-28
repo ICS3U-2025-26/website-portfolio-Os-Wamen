@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuwa's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+        @font-face { /*Code from google*/
+        font-family: "Extrude"; /* Choose a name for your font family */
+        src: url("Fonts/Extrude.ttf") format("truetype"); /* Specify the path to your TTF file and its format */
+        /* You can also add other descriptors like font-weight and font-style if needed */
+        /* font-weight: normal; */
+        /* font-style: normal; */
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'VT323','Inter', sans-serif;
+    }
+
+    body {
+      background-image: url("Images/Space\ pixel.png"); /*Wallpaper by Travis on WallpaperSafari*/
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+
+    nav {
+      background-color: #1a3333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      position: relative;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #d1d5db;
+      transition: color 0.3s ease;
+      font-size: 2rem;
+    }
+
+    .nav-links li a:hover {
+      color: #3c7e5d;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #1a3333;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      flex-direction: column;
+      min-width: 150px;
+      z-index: 999;
+    }
+
+    .dropdown a {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      color: #d1d5db;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #1a3333;
+      color: #1c7b5d;
+    }
+
+    .nav-links li:hover .dropdown {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background-color: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #1a3333;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a, .sidebar button {
+      text-decoration: none;
+      color: #d1d5db;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .sidebar a:hover, .sidebar button:hover {
+      background-color: #1a3333;
+      color: #387f5b;
+    }
+
+    .sidebar .sidebar-dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: #1a3333;
+      margin-left: 10px;
+      border-left: 2px solid #3e7e74;
+    }
+
+    .sidebar .sidebar-dropdown a {
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    h1 {
+      font-family: "Extrude", sans-serif;
+      text-align: center;
+      font-size: 800%;
+
+    }
+    .center {
+      display: block;
+      margin-left: 50;
+      margin-right: 50;
+    }
+    #pra {
+      position: relative;
+      left: 50%;
+  
+    }
+    #link a, link a:hover {
+      text-decoration: none;
+      color: #d1d5db;
+      font-size: 800%;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">✧yIp✧</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Index.html">Home</a></li>
+      <li>
+        <a href="Projects/project.html">Projects ▾</a>
+        <div class="dropdown">
+          <a href="Projects/unit1.html">Unit 1</a>
+          <a href="Projects/unit2.html">Unit 2</a>
+          <a href="Projects/unit3.html">Unit 3</a>
+          <a href="Projects/unit4.html">Unit 4</a>
+          <a href="Projects/Final.html">Final</a>
+        </div>
+      </li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="Gaming.html">Gaming Hub</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <a href="Index.html">Home</a>
+    <button id="projectToggle">Projects ▾</button>
+    <div class="sidebar-dropdown" id="sidebarDropdown">
+      <a href="Projects/unit1.html">Unit 1</a>
+      <a href="Projects/unit2.html">Unit 2</a>
+      <a href="Projects/unit3.html">Unit 3</a>
+      <a href="Projects/unit4.html">Unit 4</a>
+      <a href="Projects/Final.html">Final</a>
+    </div>
+    <a href="resources.html">Resources</a>
+    <a href="about.html">About Me</a>
+    <a href="Gaming.html">Gaming Hub</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const projectToggle = document.getElementById('projectToggle');
+    const sidebarDropdown = document.getElementById('sidebarDropdown');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    projectToggle.addEventListener('click', () => {
+      sidebarDropdown.style.display = sidebarDropdown.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+  <div style="margin-top: 10%;">
+    <h1>Yuwa's</h1>
+    <h1>PORTFOLIO</h1>
+  </div>
+  <h2 style="text-align: center;">WELCOME to my portfoilio</h2>
+  <p style="text-align: center;">This website was made to showcase all my work that I have done over the years</p>
+  <div id="link">
+    <a href="Projects/project.html">UNITS!</a> click to see unit work
+  </div>
+  
+  <div id="link">
+    <a href="Gaming.html">GAMES!</a> Click to see games
+  </div>
+  
+  
+  <br><br><br><br><br><br><br>
+  <div id="pra">
+    <p style="font-size: 190%;">VS Code is were I do all of my website code!</p>
+  </div>
+
+<img src="Images/VSC.png" width="40%" class="center" alt="VS code icon">
+
+</body>
+</html>
